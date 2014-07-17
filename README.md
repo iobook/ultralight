@@ -72,26 +72,6 @@ When you sign up for an account you will receive a User API Key and when you cre
 
 The response format for all requests is a JSON object.
 
-
-### Setup on Heroku
-
-
-1. Clone this repository
-2. Install heroku toolbelt: https://toolbelt.heroku.com/
-3. Create a new application on Heroku
-
-    ```
-    heroku apps:create my_application
-    ```
-
-4. Add a new remote to the cloned repository -- use the git url returned by heroku create
-4. Push your clone of this repository to Heroku 
-    ```
-    git push heroku master
-    ```
-
-5. Add the MongoDB Add-On to the Application created above via Heroku admin application.
-
 ### Setup on OS X
 
 1. Clone this repository
