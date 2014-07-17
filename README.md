@@ -28,7 +28,7 @@ For example, let's say you're tracking Quotes. A single object could contain:
 
 Keys must be alphanumeric strings. Values can be anything that can be JSON-encoded.
 
-Each object has a class name that you can use to distinguish different sorts of data. For example, we could call have an Idea class and a Quote class.
+Each object has a class name that you can use to distinguish different sorts of data. For example, we could have an Idea class and a Quote class in the same Application.
 
 When you retrieve objects from Ultralight, some fields are automatically added: `createdAt`, `updatedAt`, and `Id`. These field names are reserved, so you cannot set them yourself. The object above could look like this when retrieved:
 
