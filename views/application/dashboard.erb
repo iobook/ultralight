@@ -1,0 +1,47 @@
+	<div class="row">
+	  <div class="col-md-9"></div>
+	  <div class="col-md-3" style="padding-top:10px;padding-bottom:10px;">
+	  <%=@user.name%> | <a href = "users/signout">Sign Out</a>
+	  </div>
+	</div>
+
+
+<div style="padding:25px;background-color:#11C257;">
+
+	<div class="row">
+	  <div class="col-md-9"><h5 style="color:#FFFFFF;">Your User API Key: <%=@user.api_key%></h5></div>
+	  <div class="col-md-3"><a href = "/applications/new"><button type="button" class="btn btn-default">New Application</button></a></div>
+	</div>
+
+</div>
+
+<%if @applications.count == 0%>
+
+	<div style="padding:25px;">
+	<h4>You have no applications. <a href = "/applications/new">Create your first application.</a></h4>
+	</div>
+
+<%else%>
+
+	<table class="table table-striped">
+
+	<tr>
+	    <th>Application Name</th>
+	    <th>Application API ID</th>
+	    <th>Classes</th>
+	    <th>Items</th>
+	  </tr>
+
+	  <%@applications.each do |app|%>
+		  <tr>
+		    <td><%=app.name%></td>
+		    <td><%=app.id%></td>
+		    <td><%=app.class_count%></td>
+		    <td><%=app.items.count%></td>
+		  </tr>
+	  <%end%>
+
+	</table>
+
+<%end%>
+

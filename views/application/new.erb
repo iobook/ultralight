@@ -1,0 +1,41 @@
+<div style="padding:25px;background-color:#11C257;">
+
+	<div class="row">
+	  <div class="col-md-12"><p style="color:#FFFFFF;">Your User API Key: <%=@user.api_key%></p></div>
+	</div>
+
+</div>
+
+<br>
+
+
+<div style="padding:25px;padding-top:0px;">
+
+	<div class="row">
+	  
+	  <div class="col-md-0"></div>
+	  
+	  <div class="col-md-11">
+	  	
+		   <h4>Create a New Application</h4>
+
+		   <p>
+		   	<%=flash[:notice]%>
+		   </p>
+
+		  <form role="form" name="application" id = "application" action="/applications" method="post">
+		  <div class="form-group">
+		    <label for="name">Application Name</label>
+		    <input type="text" class="form-control" name = "name" id="name" placeholder="Enter Application Name">
+		  </div>
+		  <button type="submit" class="btn btn-success">Submit</button>
+		  <span style = "margin-left:15px;"><a href="/applications">Cancel</a></span>
+		 </form>
+
+	  </div>
+
+	  <div class="col-md-1"></div>
+	
+	</div>
+
+</div> 
