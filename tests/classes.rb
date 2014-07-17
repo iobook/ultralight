@@ -78,7 +78,7 @@ class APITest < MiniTest::Unit::TestCase
 
   def test_delete_object
 
-    delete "http://localhost:4567/1/classes/Tests/#{@item['id']}"
+    delete "/1/classes/Tests/#{@item['id']}"
 
     assert last_response.ok?
 
