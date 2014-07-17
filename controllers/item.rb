@@ -3,10 +3,10 @@
 	
 All requests require two header variables:
 
-1) X_DATA_API_USER_API_KEY
+1) X_ULTRALIGHT_USER_API_KEY
 Available to each registered User when they login to the admin app.
 
-2) X_DATA_API_APPLICATION_ID
+2) X_ULTRALIGHT_APPLICATION_ID
 Available in a list of applications available to the User when they login into the admin app.
 
 Create and Update require a JSON payload as the body of the request.
