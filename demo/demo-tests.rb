@@ -80,17 +80,22 @@ headers = { 'Content-Type' => 'application/json', 'Accept' => 'application/json'
   objects = JSON.parse(objects)
   
   puts "Testing READ of Multiple Objects"
-  test_did_read_multiple_objects = objects.last["A"] == "B-U"
+  if objects[1] then
+    test_did_read_multiple_objects = objects.last["A"] == "B-U"
+  else
+    test_did_read_multiple_objects = false
+  end
   puts test_did_read_multiple_objects ? "Success" : "Failed"
   puts ""
 
-   deletion = HTTParty.delete("#{@host}/#{@path}/#{@class}/#{@object['id']}",
-  { 
-    :headers => headers
-  })
+  puts "Delete Test Skipped"
+  #  deletion = HTTParty.delete("#{@host}/#{@path}/#{@class}/#{@object['id']}",
+  # { 
+  #   :headers => headers
+  # })
 
-  puts "Testing DELETE of Object"
-  # test_did_delete_object = 
-  deletion = JSON.parse(deletion)
-  test_did_delete_object = deletion["id"] == @object['id']
-  puts test_did_delete_object ? "Success" : "Failed"
+  # puts "Testing DELETE of Object"
+  # # test_did_delete_object = 
+  # deletion = JSON.parse(deletion)
+  # test_did_delete_object = deletion["id"] == @object['id']
+  # puts test_did_delete_object ? "Success" : "Failed"
