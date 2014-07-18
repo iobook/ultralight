@@ -28,6 +28,8 @@ GEM
     rack (1.5.2)
     rack-flash (0.1.2)
       rack
+    rack-flash3 (1.0.5)
+      rack
     rack-protection (1.5.3)
       rack
     sinatra (1.4.5)
@@ -47,4 +49,5 @@ DEPENDENCIES
   bcrypt
   mongo_mapper
   rack-flash
+  rack-flash3
   sinatra
