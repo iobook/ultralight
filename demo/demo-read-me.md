@@ -34,7 +34,8 @@ You can view and test a working demo of Ultralight here:
 
 10.  The *User API Key* is displayed at the top of the Dashboard.
 11.  The terminal will display test results.
-11.  Once tests are complete, refresh your Browser and confirm that the Classes
+
+12.  Once tests are complete, refresh your Browser and confirm that the Classes
     count and Objects counts have changed in the Dashboard.
 
 
