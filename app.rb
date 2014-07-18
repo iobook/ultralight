@@ -6,7 +6,6 @@ require 'securerandom'
 require 'active_support'
 require 'active_support/core_ext'
 
-
 require_relative 'models/application'
 require_relative 'models/item'
 require_relative 'models/user'
