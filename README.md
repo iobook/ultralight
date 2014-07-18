@@ -32,7 +32,7 @@ When you retrieve objects from Ultralight, the object above might look like this
       "Id": "53c8c9571aaab40002000004"
     }
 
-Class operations operate on a resource based on just the class name. For example, if the class name is `Quote`, the class URL is:
+Class operations operate on a resource based on the class name. For example, if the class name is `Quote`, the class URL is:
 
     https://api.Ultralight.com/1/classes/Quote
 
@@ -65,7 +65,7 @@ The response format for all requests is a JSON object.
 
 1. Clone this repository
 2. Create a Heroku app through their web app or toolbelt command line tool.
-3. Add your new Heroku app's git url as a remote to this repository and push.
+3. Add your new Heroku app's git url as a remote to your clone of this repository and push.
 
     ```
     git remote add heroku git@heroku.com:your-app-name.git
