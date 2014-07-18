@@ -5,6 +5,8 @@ require 'rack-flash'
 require 'securerandom'
 require 'active_support'
 require 'active_support/core_ext'
+require 'rack-flash'
+
 
 require_relative 'models/application'
 require_relative 'models/item'
