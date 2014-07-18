@@ -1,12 +1,11 @@
 require 'sinatra'
-require 'mongo_mapper'
 require 'bcrypt'
 require 'rack-flash'
 require 'securerandom'
 require 'active_support'
 require 'active_support/core_ext'
 require 'rack-flash'
-
+require 'mongo_mapper'
 
 require_relative 'models/application'
 require_relative 'models/item'
