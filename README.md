@@ -5,14 +5,13 @@ Backend As A Service application using Sinatra and MongoDB.
 
 ## REST API
 
-*NOTE: This documentation is a work in progress and currently borrows from documentation for Parse (www.parse.com) which is the model for this project.*
-
 Ultralight is an API for storing and querying JSON objects and files.
 
-Storing data through the Ultralight REST API is built around a JSON encoding of the object's data. This data is schemaless, which means that you don't need to specify ahead of time what keys exist on each object. You simply set whatever key-value pairs you want, and the backend will store it.
+A future goal for this project is to also provide a friendly content editing interface for clients to manage content that developers can then access via API.
 
-For example, let's say you're tracking Quotes. A single object could contain:
+Ultralight data consists of schemaless JSON objects so you can set any key-value pairs you want when storing an object.
 
+For example, if you were tracking Quotes, a single object could contain:
 
     {
       "quote": "The philosophy behind much advertising is based on the old observation that every man is really two men -- the man he is and the man he wants to be.",
@@ -21,24 +20,21 @@ For example, let's say you're tracking Quotes. A single object could contain:
 
 Keys must be alphanumeric strings. Values can be anything that can be JSON-encoded.
 
-Each object has a class name that you can use to distinguish different sorts of data. For example, we could have an Idea class and a Quote class in the same Application.
+Objects and classes are organized into Applications. Each object has a class name that you can use to organize data within an Application. You might have an Idea class and a Quote class in the same Application.
 
-When you retrieve objects from Ultralight, some fields are automatically added: `createdAt`, `updatedAt`, and `Id`. These field names are reserved, so you cannot set them yourself. The object above could look like this when retrieved:
-
+When you retrieve objects from Ultralight, the object above might look like this when retrieved:
 
     {
       "quote": "The philosophy behind much advertising is based on the old observation that every man is really two men -- the man he is and the man he wants to be.",
       "source": "William Feather"
       "createdAt": "2011-08-20T02:06:57.931Z",
       "updatedAt": "2011-08-20T02:06:57.931Z",
-      "Id": "Ed1nuqPvcm"
+      "Id": "53c8c9571aaab40002000004"
     }
 
-In the REST API, the class-level operations operate on a resource based on just the class name. For example, if the class name is `Quote`, the class URL is:
-
+Class operations operate on a resource based on just the class name. For example, if the class name is `Quote`, the class URL is:
 
     https://api.Ultralight.com/1/classes/Quote
-
 
 ### Operations
 When you make a POST request to e.g. /1/classes/Quote the class is created and will support all of the following operations.
@@ -59,7 +55,7 @@ For POST and PUT requests, the request body must be JSON, with the `Content-Type
 ### Authentication
 Authentication is done via HTTP headers. The `X-Ultralight-Application-Id` header identifies which application you are accessing, and the `X-Ultralight-User-API-Key` header authenticates the endpoint.
 
-When you sign up for an account you will receive a User API Key and when you create a new application you will be given an Application API Key.
+When you sign up for an account you will receive a User API Key and when you create a new Application you will be given an Application API Key.
 
 ### Response Format
 
