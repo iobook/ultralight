@@ -5,16 +5,9 @@ Backend As A Service application using Sinatra and MongoDB.
 
 ## REST API
 
-The REST API lets you interact with Ultralight from anything that can send an HTTP request. There are many things you can do with the REST API. For example:
+*NOTE: This documentation is a work in progress and currently borrows from documentation for Parse (www.parse.com) which is the model for this project.*
 
-* A mobile website can access Ultralight data from Javascript.
-* A webserver can show data from Ultralight on a website.
-* You can upload large amounts of data that will later be consumed in a mobile app.
-* You can download recent data to run your own custom analytics.
-* Applications written in any programming language can interact with data on Ultralight.
-* You can export all of your data if you no longer want to use Ultralight.
-
-### Quick Reference
+Ultralight is an API for storing and querying JSON objects and files.
 
 Storing data through the Ultralight REST API is built around a JSON encoding of the object's data. This data is schemaless, which means that you don't need to specify ahead of time what keys exist on each object. You simply set whatever key-value pairs you want, and the backend will store it.
 
