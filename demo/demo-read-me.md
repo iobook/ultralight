@@ -1,4 +1,4 @@
-Heroku Live Demo
+Ultralight Live Demo
 ----------------
 
 You can view and test a working demo of Ultralight here:
@@ -28,13 +28,13 @@ You can view and test a working demo of Ultralight here:
 
 7. Type return to run the file
 
-8.  You will be prompted to enter your Application ID and User API Key.
+8.  You will be prompted to enter your *Application ID* and *User API Key*.
 
-9.  The Application ID is available in the list of your Applications in the Dashboard.
+9.  The *Application ID* is available in the list of your Applications in the Dashboard.
 
-10.  The User API Key is displayed at the top of the Dashboard.
-
-11.  Once tests are complete, refresh your Browser and confirm that the Classes
+10.  The *User API Key* is displayed at the top of the Dashboard.
+11.  The terminal will display test results.
+11. Once tests are complete, refresh your Browser and confirm that the Classes
     count and Objects counts have changed in the Dashboard.
 
 
