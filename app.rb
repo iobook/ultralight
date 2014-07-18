@@ -13,8 +13,12 @@ require_relative 'controllers/session'
 require_relative 'controllers/item'
 require_relative 'controllers/application'
 
+# configure do
+#   MongoMapper.database = 'development'
+# end
+
 configure do
-  MongoMapper.database = 'development'
+  MongoMapper.setup({'production' => {'uri' => ENV['MONGOHQ_URL']}}, 'production')
 end
 
 enable :sessions
