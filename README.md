@@ -65,6 +65,17 @@ When you sign up for an account you will receive a User API Key and when you cre
 
 The response format for all requests is a JSON object.
 
+### Setup on Heroku
+
+1. Clone this repository
+2. Create a Heroku app through their web app or toolbelt command line tool.
+3. Add your new Heroku app's git url as a remote to this repository and push.
+
+    ```
+    git remote add heroku git@heroku.com:your-app-name.git
+    git push heroku master
+    ```
+
 ### Setup on OS X
 
 1. Clone this repository
